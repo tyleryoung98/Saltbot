@@ -1,0 +1,24 @@
+{
+  "name": "saltbot",
+  "version": "1.0.0",
+  "description": "Discord bot that does things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyleryoung98/Saltbot.git"
+  },
+  "author": "Tyler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyleryoung98/Saltbot/issues"
+  },
+  "homepage": "https://github.com/tyleryoung98/Saltbot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "mangadex-api": "^1.0.1-b",
+    "poketo": "^0.6.9"
+  }
+}

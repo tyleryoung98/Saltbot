@@ -1,0 +1,6 @@
+use poketo to check the latest chapter
+see if that chapter is different from whats stored
+if different, return link to that chapter
+update db
+
+add timer

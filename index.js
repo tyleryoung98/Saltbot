@@ -1,14 +1,14 @@
 const discord = require('discord.js');
+const mangadex = require('mangadex-api');
+cosnt poketo = require('poketo');
 const bot = new discord.Client();
 const token = 'put token here';
 
-const keywords = ['getpacket'];
-//const commands = ['unban'];
+//const keywords = ['getManga'];
+const commands = ['getManga'];
 var server;
 var nameGuard = false;
 var userName = 'Saltbot';
-var pcap = require('pcap'),
-    pcap_session = pcap.createSession("", "ip");
 
 bot.on('ready', () => {
   server = bot.guilds.first();//cache server object
@@ -21,21 +21,6 @@ bot.on('guildUpdate', function(oldServer, newServer) {
   console.log("Server cache updated");
 });
 
-// create an event listener for messages
-bot.on('message', function(message) {
-  GetPacket(message);
-});
-
-
-
-function GetPacket(message) {
-  let str = message.content.toLowerCase();
-  for(let word of keywords) {
-    if(str.includes(word)){
-      message.channel.sendMessage('command recieved');
-    }
-  }
-}
 
 bot.on('guildMemberUpdate', function(oldUser, newUser) {
 
