@@ -6,6 +6,7 @@ let mangaSchema = new Schema({
   nickname: {type: String, trim: true},
   slug: {type: String},
   link: {type: String, required: true, trim: true},
-  description: {type: String, required: true}
+  description: {type: String, required: true},
+  currentChapter: {type: Numbers}
 })
 module.exports = mongoose.model('manga', mangaSchema);

@@ -3,4 +3,4 @@ see if that chapter is different from whats stored
 if different, return link to that chapter
 update db
 
-add timer
+getManga.js - need to add poketo
