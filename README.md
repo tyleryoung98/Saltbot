@@ -6,8 +6,10 @@ Bot for my discord server.
 
 ### Commands
 !getManga {full title, saved nickname, slug}
+!latest {full title, saved nickname, slug}
 
 ### Future Features
+-more manga info(desc, genre, etc.)
 -omg counter
 -manga upload alert
 -recommendations?
