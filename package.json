@@ -19,6 +19,10 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "mangadex-api": "^1.0.1-b",
+    "mongoose": "^5.4.12",
     "poketo": "^0.6.9"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0"
   }
 }
