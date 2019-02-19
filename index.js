@@ -33,7 +33,7 @@ var userName = 'Saltbot';
 bot.on('ready', () => {
   server = bot.guilds.first();//cache server object
   console.log("Ready!");
-  var interval = setInterval(function(){checkStatus();}, 300000);//5 mins
+  //var interval = setInterval(function(){checkStatus();}, 300000);//5 mins
 });
 
 //check messages for a command, etc.
