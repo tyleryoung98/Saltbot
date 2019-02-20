@@ -8,12 +8,12 @@ const mongoose = require('mongoose');
 if(process.env.NODE_ENV != 'production'){
   require('dotenv').config();
 }
-mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true }).then(() => {
+mongoose.connect('mongodb://tyleryoung216:AntiSpiral9685@ds225375.mlab.com:25375/saltbot', {useNewUrlParser: true}).then(() => {
   console.log('connected to mongodb');
 });
 
 //create bot and pull config
-const {prefix,token} = require('./locals/config.json');
+const {prefix,token} = require('./config/config.json');
 const bot = new discord.Client();
 
 //command setup
@@ -21,7 +21,7 @@ bot.commands = new discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
-	client.commands.set(command.name, command);
+	bot.commands.set(command.name, command);
 }
 
 //other variables
@@ -44,10 +44,10 @@ bot.on('message', message=> {
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
 
-  if (!client.commands.has(command)) return;
+  if (!bot.commands.has(command)) return;
 
 	try {
-		client.commands.get(command).execute(message, args);
+		bot.commands.get(command).execute(message, args);
 	} catch (error) {
 		console.error(error);
 		message.reply('That command is borked :PepeHands:');

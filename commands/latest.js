@@ -1,6 +1,6 @@
 const mangadex = require('mangadex-api');
 const poketo = require('poketo');
-const Manga = require('../storage/mangas.js');
+const Manga = require('../models/mangas.js');
 
 module.exports = {
   name: 'latest',

@@ -4,13 +4,19 @@ Bot for my discord server.
 ### Current Features
 -get manga
 
+-omg counter (in testing)
+
 ### Commands
-!getManga {full title, saved nickname, slug}
-!latest {full title, saved nickname, slug}
+!search [string of title]
+
+!getManga (in progress)
+
+!latest (in progress)
+
+!omg [user] (in testing)
 
 ### Future Features
 -more manga info(desc, genre, etc.)
--omg counter
 -manga upload alert
 -recommendations?
 -games?

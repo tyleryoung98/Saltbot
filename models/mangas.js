@@ -5,7 +5,7 @@ let mangaSchema = new Schema({
   title: {type: String, required: true, trim: true},
   nickname: {type: String, trim: true},
 
-  mangadex_id: {type: Numbers},
+  mangadex_id: {type: Number},
   poketo_id: {type: String, required: true},
 
   link: {type: String, required: true, trim: true},
@@ -14,7 +14,7 @@ let mangaSchema = new Schema({
   artist: {type: String},
   genres: [{type: String}],
 
-  currentChapter: {type: Numbers},
+  currentChapter: {type: Number},
   followers: [{type: String}]
-})
+});
 module.exports = mongoose.model('manga', mangaSchema);
