@@ -1,18 +1,23 @@
 const db = require('../models/general.js');
+const mongoose = require('mongoose');
 
 module.exports = {
   name: 'omg',
   description: 'Counts the amount of omgs owed to [user]',
   execute(message, args){
-    db.findOne({userID: args[0].id}, function(err, user){
+    let person = args[0];
+    console.log(person);
+    db.findOne({userID: person.id}, function(err, user){
       if(err){//if the person isnt found, add them to the db
-        db.create({args[0].id, args[0].username, args[0].discriminator, 0}).then(()=>
-          console.log('db created for ' + args[0].id);
-        );
+        let count = 0;
+        db.create({person, count}).then(()=>
+          console.log('db created for this guy')).catch(function(err2){
+            console.log('creation error');
+          });
       }
-
+      console.log('skipped creation');
       user.omgCount++;
-      console.log('Current omg count for ' + args[0].username + ': ' + user.omgCount);
+      console.log('Current omg count for ' + user.username + ': ' + user.omgCount);
     });
   }
 };

@@ -4,16 +4,17 @@ const mangadex = require('mangadex-api');
 const poketo = require('poketo');
 const mongoose = require('mongoose');
 
+//pull config
+const {prefix,token,dbuser,dbpass} = require('./config/config.json');
+
 //connect to mongo
-if(process.env.NODE_ENV != 'production'){
-  require('dotenv').config();
-}
-mongoose.connect('mongodb://tyleryoung216:AntiSpiral9685@ds225375.mlab.com:25375/saltbot', {useNewUrlParser: true}).then(() => {
-  console.log('connected to mongodb');
+mongoose.connect('mongodb://'+dbuser+':'+dbpass+'@ds225375.mlab.com:25375/saltbot',
+  {useNewUrlParser: true})
+  .then(() => {
+    console.log('connected to mongodb');
 });
 
-//create bot and pull config
-const {prefix,token} = require('./config/config.json');
+//create bot
 const bot = new discord.Client();
 
 //command setup
