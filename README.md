@@ -17,6 +17,11 @@ Bot for my discord server.
 
 ### Future Features
 -more manga info(desc, genre, etc.)
+
 -manga upload alert
+
+-mdlist scraper
+
 -recommendations?
+
 -games?
