@@ -1,6 +1,8 @@
 # Saltbot
 Bot for my discord server.
 
+### PROJECT ON HOLD UNTIL MAY(?)
+
 ### Current Features
 -get manga
 
